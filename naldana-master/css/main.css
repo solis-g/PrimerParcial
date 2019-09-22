@@ -316,6 +316,20 @@ footer .social-links {
         max-width: 1024px;
     }
 
+    .big-hero>.container li a{
+        font-size: 5rem;
+        color: #D7DEE6;
+        text-decoration: none;
+    }
+    .big-hero>.container a{
+        font-size: 5rem;
+        color: #0AC693;
+    }
+    .social-links{
+        margin: 0%;
+        padding: 0%;
+    }
+
     .about>.container{
         display: flex;
         flex-direction: row;
@@ -364,6 +378,7 @@ footer .social-links {
         margin-right: 0.5em;
         padding: 0;
     }
+
 
 
 }
