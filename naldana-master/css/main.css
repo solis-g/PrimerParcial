@@ -18,9 +18,10 @@ body {
     font-weight: 400;
 }
 
+/*estilo*/
 .header {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 .src-only {
@@ -64,13 +65,13 @@ p{
     width: 150px;
 }
 
+/*definiendo area, esta tiene al container*/
 .big-hero h2 {
     font-size: 1.875em;
     font-weight: 700;
     letter-spacing: 0.002em;
     margin-top: 1em ;
 }
-
 .big-hero p {
     font-size: 0.7em;;
     color: #D7DEE6;
@@ -87,7 +88,7 @@ p{
     justify-content: center
 
 }
-
+/*estilos*/
 .social-links li a{
     color: #D7DEE6;
     text-decoration: none;
@@ -120,7 +121,7 @@ p{
     max-width: 350px;
     margin: 2rem auto;
 }
-
+/*definiendo las publicaciones*/
 .post ul li article {
     overflow: hidden;
     border-radius: 10px;
@@ -164,7 +165,7 @@ p{
     font-size: 1.125em;
     margin: 2em;
 }
-
+/*caracteristicas de la img y el parrafo de la zona acerca de*/
 .bio-info img{
    width: 200px;
 }
@@ -176,7 +177,7 @@ p{
     line-height: 25px;
     letter-spacing: 2px;
 }
-
+/*definiendo area de contacto*/
 .contact {
     display: flex;
     flex-direction: column;
@@ -192,7 +193,7 @@ p{
     display: flex;
     flex-direction: column;
 }
-
+/*area de introduccion de datos*/
 .contact-form input, .contact-form textarea{
     padding: 1rem 2rem;
     border: none;
@@ -224,6 +225,7 @@ p{
     background-image: url("../images/decoracion_oscura_small.svg");
 }
 
+/*decoracion footer*/
 footer{
     background-color: #0D5061;
     color:#D7DEE6;
@@ -243,6 +245,7 @@ footer .social-links {
     height: calc(100vh - 60px);
 }
 
+/*caracteristicas del menu, decoracion y forma*/
 .menu {
     list-style: none;
     text-align: left;
@@ -253,7 +256,6 @@ footer .social-links {
     padding: 0.5em;
     margin-top: 5px;
 }
-
 .menu li a {
     color: white;
     text-decoration: none;
@@ -261,15 +263,17 @@ footer .social-links {
 }
 
 /* Pesonalizando estilo para tablets*/
-@media only screen and (min-width: 768px) {
-  
+@media only screen and (min-width: 768px) and (max-width : 1024px) and (orientation : landscape) { /*toma el caso de la orientcacion*/
+
+    /*caracteristicas de la lista publicacion, creacion del flex*/
     .post ul {
         list-style: none;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+
+    /*clase contenedora de puclicaciones*/
     .post ul li {
         min-height: 350px;
         max-height: 3500px;
@@ -277,7 +281,7 @@ footer .social-links {
         flex: 1 0 300px;
     }
 
-
+    /*personalizacion logo*/
     .logo {
         width: 150px;
         margin: 1.5em;
@@ -290,7 +294,7 @@ footer .social-links {
     .hide-desktop {
         display: none;
     }
-
+    /*decoracion menu*/
     .menu {
         background-color: #112935; 
         position: static;
@@ -305,6 +309,9 @@ footer .social-links {
 
 
     /*TODO: FALTA CSS */
+    body{
+        width: 100ch;
+    }
 } 
 
 @media only screen and (min-width: 1024px) {
@@ -315,11 +322,12 @@ footer .social-links {
         margin: 0 auto;
         max-width: 1024px;
     }
-
+    /*sombra*/
     .header a:hover{
         color: #F74442;
     }
 
+    /*decoracion contenedor*/
     .big-hero>.container li a{
         font-size: 5rem;
         color: #D7DEE6;
@@ -334,19 +342,45 @@ footer .social-links {
         padding: 0%;
     }
 
+    .menu {
+        background-color: #112935; 
+        position: static;
+        z-index: 20;
+        width: auto;
+        height:auto;
+        display: flex;
+        margin-top: 1em;
+    }
+    /*caracteristicas de la lista publicacion, creacion del flex*/
+    .post ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /*clase contenedora de puclicaciones*/
+    .post ul li {
+        min-height: 350px;
+        max-height: 3500px;
+        margin: 1rem 2rem;
+        flex: 1 0 300px;
+    }
+
+    /*base contenedor*/
     .about>.container{
         display: flex;
         flex-direction: row;
     }
- 
+
+    /*contenido*/
     .bio-info{
         width: 50%;
     }
-    
     .bio-info p{
         text-align: justify;
     }
-
+    /*caracteristicas h2 (posee esa seleccion para q solo sea al h)*/
     .about>.container h2{
         justify-content: center;
         display: flex;
@@ -355,6 +389,7 @@ footer .social-links {
         
     }
 
+    /*carascteristicas clase contact*/
     .contact{
         display: flex;
         flex-direction: column;
@@ -366,6 +401,7 @@ footer .social-links {
 
     }
 
+    /*base footer*/
     footer .social-links{
         list-style: none;
         padding: 0;
@@ -373,7 +409,7 @@ footer .social-links {
         display: flex;
         justify-content: center;
     
-    }
+    } /*decoracion */
     footer .social-links li a{
         color: #D7DEE6;
         text-decoration: none;
@@ -382,52 +418,67 @@ footer .social-links {
         margin-right: 0.5em;
         padding: 0;
     }
-
-
-
 }
 
 @media only screen and (min-width: 1440px) {
 
     /*TODO: FALTA CSS */
+    /*caracteristicas del contenedor*/
     .container {
         width: 80%;
         margin: 0 auto;
         max-width: 1440px;
     }
-
+    /*sombra nav*/
     .header a:hover{
         color: #F74442;
     }
-
+    /*tamaño y color de iconos superiores*/
     .big-hero>.container li a{
         font-size: 5rem;
         color: #D7DEE6;
         text-decoration: none;
     }
-
     .big-hero>.container a{
         font-size: 5rem;
         color: #0AC693;
     }
+
     .social-links{
         margin: 0%;
         padding: 0%;
     }
+    /*caracteristicas de la lista publicacion, creacion del flex*/
+    .post ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
+    /*clase contenedora de puclicaciones*/
+    .post ul li {
+        min-height: 350px;
+        max-height: 3500px;
+        margin: 1rem 2rem;
+        flex: 1 0 300px;
+    }
+    /*creacion del flex que contiene la clase about y contact*/
     .about>.container{
         display: flex;
         flex-direction: row;
     }
+
+    /*modificando la clase bio*/
  
     .bio-info{
         width: 50%;
     }
-    
     .bio-info p{
         text-align: justify;
     }
 
+    /*personalizacion del tema*/
     .about>.container h2{
         justify-content: center;
         display: flex;
@@ -435,6 +486,7 @@ footer .social-links {
         flex: 1 1 auto;    
     }
 
+    /*personalizacion de 'forma de contacto'*/
     .contact{
         display: flex;
         flex-direction: column;
@@ -443,7 +495,7 @@ footer .social-links {
         padding: 1em 1em;
         width: 50%;
     }
-
+    /*creacion del flex contenedor */
     footer .social-links{
         list-style: none;
         padding: 0;
@@ -451,7 +503,7 @@ footer .social-links {
         display: flex;
         justify-content: center;
     }
-    
+    /*footer de la p.web, se le increemento un poco el tamaño de logo*/
     footer .social-links li a{
         color: #D7DEE6;
         text-decoration: none;
